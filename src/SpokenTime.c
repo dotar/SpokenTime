@@ -65,9 +65,6 @@ void GetMinuteString(int minute,char* minutBuffer){
     if( (minute == 15) )
     {
         strcat(row_1_buffer,"kvart");
-    }else
-    {
-        strcat(row_1_buffer,minute);
     }
     
     ++rows;
