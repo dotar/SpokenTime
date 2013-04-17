@@ -62,10 +62,24 @@ void GetMinuteString(int minute,char* minutBuffer){
     
     
     //get correct minute
-    if( (minute == 15) )
+    if ( (minute == 5) || (minute == 55) ||
+        (minute == 25) || (minute == 35) )
+    {
+        strcat(row_1_buffer,"fem");
+    }
+    else if( (minute == 10) || (minute == 50) )
+    {
+        strcat(row_1_buffer,"tio");
+    }
+    else if( (minute == 15) || (minute == 45) )
     {
         strcat(row_1_buffer,"kvart");
     }
+    else if( (minute == 20) || (minute == 40 ) )
+    {
+        strcat(row_1_buffer,"tjugo");
+    }
+
     
     ++rows;
     
