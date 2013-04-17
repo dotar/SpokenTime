@@ -1,0 +1,12 @@
+{
+ "friendlyVersion": "0.1",
+ "versionDefName": "APP_RESOURCES",
+
+ "media": [
+     {
+        "type": "png",
+        "defName": "IMAGE_MENU_ICON",
+        "file": "images/menu_icon_spokentime.png"
+   	 }
+]
+}
