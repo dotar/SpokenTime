@@ -62,36 +62,124 @@ void GetMinuteString(int minute,char* minutBuffer){
     
     
     //get correct minute
-    if ( (minute == 5) || (minute == 55) ||
+    if ( (minute == 1) || (minute == 59) ||
+        (minute == 29) || (minute == 31) )
+    {
+        strcat(row_1_buffer,"ett");
+    }
+    else if ( (minute == 2) || (minute == 58) ||
+        (minute == 28) || (minute == 32) )
+    {
+        strcat(row_1_buffer,"två");
+    }
+    else if ( (minute == 3) || (minute == 57) ||
+        (minute == 27) || (minute == 33) )
+    {
+        strcat(row_1_buffer,"tre");
+    }
+    else if ( (minute == 4) || (minute == 56) ||
+        (minute == 26) || (minute == 34) )
+    {
+        strcat(row_1_buffer,"fyra");
+    }
+    else if ( (minute == 5) || (minute == 55) ||
         (minute == 25) || (minute == 35) )
     {
         strcat(row_1_buffer,"fem");
+    }
+    else if ( (minute == 6) || (minute == 54) ||
+        (minute == 36) )
+    {
+        strcat(row_1_buffer,"sex");
+    }
+    else if ( (minute == 7) || (minute == 53) ||
+        (minute == 37) )
+    {
+        strcat(row_1_buffer,"sju");
+    }
+    else if ( (minute == 8) || (minute == 52) ||
+        (minute == 38) )
+    {
+        strcat(row_1_buffer,"åtta");
+    }
+    else if ( (minute == 9) || (minute == 51) ||
+        (minute == 39) )
+    {
+        strcat(row_1_buffer,"nio");
     }
     else if( (minute == 10) || (minute == 50) )
     {
         strcat(row_1_buffer,"tio");
     }
+    else if ( (minute == 11) || (minute == 49) ||
+    {
+        strcat(row_1_buffer,"elva");
+    }
+    else if ( (minute == 12) || (minute == 48) ||
+    {
+        strcat(row_1_buffer,"tolv");
+    }
+    else if ( (minute == 13) || (minute == 47) ||
+    {
+        strcat(row_1_buffer,"tretton");
+    }
+    else if ( (minute == 14) || (minute == 44) )
+    {
+        strcat(row_1_buffer,"fjorton");
+    }
     else if( (minute == 15) || (minute == 45) )
     {
         strcat(row_1_buffer,"kvart");
     }
+    else if ( (minute == 16) || (minute == 44) ||
+    {
+        strcat(row_1_buffer,"sexton");
+    }
+    else if ( (minute == 17) || (minute == 43) ||
+    {
+        strcat(row_1_buffer,"sjutton");
+    }
+    else if ( (minute == 18) || (minute == 42) ||
+    {
+        strcat(row_1_buffer,"arton");
+    }
+    else if ( (minute == 19) || (minute == 41) ||
+    {
+        strcat(row_1_buffer,"nitton");
+    }
     else if( (minute == 20) || (minute == 40 ) )
     {
         strcat(row_1_buffer,"tjugo");
+    }
+    else if( (minute == 21) )
+    {
+        strcat(row_1_buffer,"tjugoett");
+    }
+    else if( (minute == 22) )
+    {
+        strcat(row_1_buffer,"tjugotvå");
+    }
+    else if( (minute == 23) )
+    {
+        strcat(row_1_buffer,"tjugotre");
+    }
+    else if( (minute == 24) )
+    {
+        strcat(row_1_buffer,"tjugofyra");
     }
 
     
     ++rows;
     
     //Get correct preposition
-    if (minute < 23)
+    if (minute < 25)
     {
         strcat(row_2_buffer,"över");
     }
     else if(minute < 30){
         strcat(row_2_buffer,"i halv");
     }
-    else if(minute < 37){
+    else if(minute < 39){
         strcat(row_2_buffer,"över");
         strcat(row_3_buffer,"halv");
         ++rows;
@@ -118,13 +206,13 @@ int GetTime(int hours, int minutes){
     text_layer_set_font(&row_3,font);
 
     //First check if it is o'clock something or halv something
-    if (minutes >= 57 || minutes <= 3)
+    if (minutes == 0)
     {
         text_layer_set_font(&row_1,fontBold);
         strcat(row_1_buffer,timme);
         return 3;
     }
-    else if(minutes > 26 && minutes < 33){
+    else if(minutes == 30){
         strcat(row_1_buffer,"halv");
         text_layer_set_font(&row_2,fontBold);
         strcat(row_2_buffer,timme);
