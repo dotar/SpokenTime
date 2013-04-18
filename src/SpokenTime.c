@@ -111,15 +111,15 @@ void GetMinuteString(int minute,char* minutBuffer){
     {
         strcat(row_1_buffer,"tio");
     }
-    else if ( (minute == 11) || (minute == 49) ||
+    else if ( (minute == 11) || (minute == 49) )
     {
         strcat(row_1_buffer,"elva");
     }
-    else if ( (minute == 12) || (minute == 48) ||
+    else if ( (minute == 12) || (minute == 48) )
     {
         strcat(row_1_buffer,"tolv");
     }
-    else if ( (minute == 13) || (minute == 47) ||
+    else if ( (minute == 13) || (minute == 47) )
     {
         strcat(row_1_buffer,"tretton");
     }
@@ -131,19 +131,19 @@ void GetMinuteString(int minute,char* minutBuffer){
     {
         strcat(row_1_buffer,"kvart");
     }
-    else if ( (minute == 16) || (minute == 44) ||
+    else if ( (minute == 16) || (minute == 44) )
     {
         strcat(row_1_buffer,"sexton");
     }
-    else if ( (minute == 17) || (minute == 43) ||
+    else if ( (minute == 17) || (minute == 43) )
     {
         strcat(row_1_buffer,"sjutton");
     }
-    else if ( (minute == 18) || (minute == 42) ||
+    else if ( (minute == 18) || (minute == 42) )
     {
         strcat(row_1_buffer,"arton");
     }
-    else if ( (minute == 19) || (minute == 41) ||
+    else if ( (minute == 19) || (minute == 41) )
     {
         strcat(row_1_buffer,"nitton");
     }
