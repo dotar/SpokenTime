@@ -62,114 +62,111 @@ void GetMinuteString(int minute,char* minutBuffer){
     
     
     //get correct minute
-switch (minute) {
-  case 1:
-  case 59:
-  case 29:
-  case 31:
-    strcat(row_1_buffer,"ett");
-    break;
-  case 2:
-  case 58:
-  case 28:
-  case 32:
-    strcat(row_1_buffer,"två");
-    break;
-  case 3:
-  case 57:
-  case 27:
-  case 33:
-    strcat(row_1_buffer,"tre");
-    break;
-  case 4:
-  case 56:
-  case 26:
-  case 34:
-    strcat(row_1_buffer,"fyra");
-    break;
-  case 5:
-  case 55:
-  case 25:
-  case 35:
-    strcat(row_1_buffer,"fem");
-    break;
-  case 6:
-  case 54:
-  case 36:
-    strcat(row_1_buffer,"sex");
-    break;
-  case 7:
-  case 53:
-  case 37:
-    strcat(row_1_buffer,"sju");
-    break;
-  case 8:
-  case 52:
-  case 38:
-    strcat(row_1_buffer,"åtta");
-    break;
-  case 9:
-  case 51:
-  case 39:
-    strcat(row_1_buffer,"nio");
-    break;
-  case 10:
-  case 50:
-    strcat(row_1_buffer,"tio");
-    break;
-  case 11:
-  case 49:
-    strcat(row_1_buffer,"elva");
-    break;
-  case 12:
-  case 48:
-    strcat(row_1_buffer,"tolv");
-    break;
-  case 13:
-  case 47:
-    strcat(row_1_buffer,"tretton");
-    break;
-  case 14:
-  case 44:
-    strcat(row_1_buffer,"fjorton");
-    break;
-  case 15:
-  case 45:
-    strcat(row_1_buffer,"kvart");
-    break;
-  case 16:
-  case 44:
-    strcat(row_1_buffer,"sexton");
-    break;
-  case 17:
-  case 43:
-    strcat(row_1_buffer,"sjutton");
-    break;
-  case 18:
-  case 42:
-    strcat(row_1_buffer,"arton");
-    break;
-  case 19:
-  case 41:
-    strcat(row_1_buffer,"nitton");
-    break;
-  case 20:
-  case 40:
-    strcat(row_1_buffer,"tjugo");
-    break;
-  case 21:
-    strcat(row_1_buffer,"tjugoett");
-    break;
-  case 22:
-    strcat(row_1_buffer,"tjugotvå");
-    break;
-  case 23:
-    strcat(row_1_buffer,"tjugotre");
-    break;
-  case 24:
-    strcat(row_1_buffer,"tjugofyra");
-    break;
-}
+    if ( (minute == 1) || (minute == 59) ||
+        (minute == 29) || (minute == 31) )
+    {
+        strcat(row_1_buffer,"ett");
+    }
+    else if ( (minute == 2) || (minute == 58) ||
+        (minute == 28) || (minute == 32) )
+    {
+        strcat(row_1_buffer,"två");
+    }
+    else if ( (minute == 3) || (minute == 57) ||
+        (minute == 27) || (minute == 33) )
+    {
+        strcat(row_1_buffer,"tre");
+    }
+    else if ( (minute == 4) || (minute == 56) ||
+        (minute == 26) || (minute == 34) )
+    {
+        strcat(row_1_buffer,"fyra");
+    }
+    else if ( (minute == 5) || (minute == 55) ||
+        (minute == 25) || (minute == 35) )
+    {
+        strcat(row_1_buffer,"fem");
+    }
+    else if ( (minute == 6) || (minute == 54) ||
+        (minute == 36) )
+    {
+        strcat(row_1_buffer,"sex");
+    }
+    else if ( (minute == 7) || (minute == 53) ||
+        (minute == 37) )
+    {
+        strcat(row_1_buffer,"sju");
+    }
+    else if ( (minute == 8) || (minute == 52) ||
+        (minute == 38) )
+    {
+        strcat(row_1_buffer,"åtta");
+    }
+    else if ( (minute == 9) || (minute == 51) ||
+        (minute == 39) )
+    {
+        strcat(row_1_buffer,"nio");
+    }
+    else if( (minute == 10) || (minute == 50) )
+    {
+        strcat(row_1_buffer,"tio");
+    }
+    else if ( (minute == 11) || (minute == 49) )
+    {
+        strcat(row_1_buffer,"elva");
+    }
+    else if ( (minute == 12) || (minute == 48) )
+    {
+        strcat(row_1_buffer,"tolv");
+    }
+    else if ( (minute == 13) || (minute == 47) )
+    {
+        strcat(row_1_buffer,"tretton");
+    }
+    else if ( (minute == 14) || (minute == 44) )
+    {
+        strcat(row_1_buffer,"fjorton");
+    }
+    else if( (minute == 15) || (minute == 45) )
+    {
+        strcat(row_1_buffer,"kvart");
+    }
+    else if ( (minute == 16) || (minute == 44) )
+    {
+        strcat(row_1_buffer,"sexton");
+    }
+    else if ( (minute == 17) || (minute == 43) )
+    {
+        strcat(row_1_buffer,"sjutton");
+    }
+    else if ( (minute == 18) || (minute == 42) )
+    {
+        strcat(row_1_buffer,"arton");
+    }
+    else if ( (minute == 19) || (minute == 41) )
+    {
+        strcat(row_1_buffer,"nitton");
+    }
+    else if( (minute == 20) || (minute == 40 ) )
+    {
+        strcat(row_1_buffer,"tjugo");
+    }
+    else if( (minute == 21) )
+    {
+        strcat(row_1_buffer,"tjugoett");
+    }
+    else if( (minute == 22) )
+    {
+        strcat(row_1_buffer,"tjugotvå");
+    }
+    else if( (minute == 23) )
+    {
+        strcat(row_1_buffer,"tjugotre");
+    }
+    else if( (minute == 24) )
+    {
+        strcat(row_1_buffer,"tjugofyra");
+    }
 
     
     ++rows;
